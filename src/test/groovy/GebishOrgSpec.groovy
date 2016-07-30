@@ -1,9 +1,12 @@
 import geb.spock.GebReportingSpec
+import page.GebishOrgHomePage
 
 class GebishOrgSpec extends GebReportingSpec {
 
     def "Gebのホームページが表示できる"() {
         given: "Gebのホームページにいて"
+        // TODO GOではなくTOに置き換え
+//        to GebishOrgHomePage
         go "http://www.gebish.org/"
 
         when: "マニュアルのメニューのところにホバーして"
