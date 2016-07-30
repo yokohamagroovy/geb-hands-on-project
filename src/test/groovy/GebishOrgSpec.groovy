@@ -10,8 +10,8 @@ class GebishOrgSpec extends GebReportingSpec {
         when: "マニュアルのメニューのところにホバーして"
         hoverManualsMenu()
 
-        and: "最初のリンクをクリックすると"
-        currentManualMenu.click()
+        and: "最新のマニュアルのリンクをクリックすると"
+        clickCurrentManualLink()
 
         then: "アニュアルページに遷移する"
         title == "The Book Of Geb"
