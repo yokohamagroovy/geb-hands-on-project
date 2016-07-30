@@ -4,9 +4,16 @@ import geb.Page
 
 class GebishOrgHomePage extends Page {
 
-    static at = { /* ここにこのページに遷移したことを確認する条件を書いてね */ }
+    static at = { title == "Geb - Very Groovy Browser Automation" }
 
     static content = {
-        // ここにElementの定義を書いてね
+        manualsMenu { $("#header-content ul li", 0).children("span") }
+        currentManualMenu { $("#header-content ul li", 0).$('.link-list li a')[0] }
+    }
+
+    def hoverManualsMenu() {
+        interact {
+            moveToElement(manualsMenu)
+        }
     }
 }
